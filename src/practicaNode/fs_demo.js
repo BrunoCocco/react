@@ -19,4 +19,12 @@ setTimeout(() => {
     }
     console.log('🗑️  Archivo eliminado correctamente.');
   });
-}, 3000); // 3000 ms = 3 segundos
+}, 3000);}
+
+{/*Genere un archivo con un mensaje personalizado (process.argv[2] como nombre).
+
+Espere 5 segundos.
+
+Lo borre.
+
+Si no existe, muestre un mensaje de error claro. */}
