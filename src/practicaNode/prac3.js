@@ -1,11 +1,11 @@
-import fs from 'fs';
+import fs from "fs";
 import readline from "readline";
 
 function practica3() {
   const archivo = process.argv[2];
 
-  const stream = fs.createReadStream(archivo, 'utf-8');
- 
+  const stream = fs.createReadStream(archivo, "utf-8");
+
   const rl = readline.createInterface({
     input: stream,
   });
@@ -13,6 +13,13 @@ function practica3() {
 
   rl.on("line", () => {
     contadorLineas++;
+  });
+  rl.on("line", (linea) => {
+    if (linea.includes("y")) {
+      console.log(`Esta linea tiene la letra y:
+        ${linea}  
+        `);
+    }
   });
 
   rl.on("close", () => {
